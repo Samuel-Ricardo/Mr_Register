@@ -6,9 +6,9 @@
 package com.study.register.Services;
 
 import com.study.register.entity.Person;
-import com.study.register.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
+import com.study.register.repository.PersonRepository;
 
 /**
  *
@@ -16,17 +16,17 @@ import org.springframework.web.bind.annotation.RequestBody;
  */
 public class PersonService {
     
-    private PersonRepository personRepository;
+    private PersonService personService;
     
     @Autowired
-    public PersonService(PersonRepository personRepository) {
-        this.personRepository = personRepository;
+    public PersonService(PersonService personService) {
+        this.personService = personService;
     }
     
     public String CreatePerson(@RequestBody Person person) {
         
-        Person savedPerson = personRepository.save(person);
-        
-        return "Created, ID - "+savedPerson.getId();
+        return personService.CreatePerson(person);
     }
+    
+    
 }

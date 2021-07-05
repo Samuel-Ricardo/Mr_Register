@@ -5,10 +5,23 @@
  */
 package com.study.register.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  *
  * @author Samuel
  */
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Phone {
     
+    private long id;
+    private PhoneType type;
+    private String number;
 }

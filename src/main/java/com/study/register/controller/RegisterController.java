@@ -5,9 +5,12 @@
  */
 package com.study.register.controller;
 
+import com.study.register.entity.Person;
 import com.study.register.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -32,5 +35,11 @@ public class RegisterController {
         return "API Test";
     }
     
-    
+    @PostMapping
+    public String CreatePerson(@RequestBody Person person) {
+        
+        Person savedPerson = personRepository.save(person);
+        
+        return "Created, ID - "+savedPerson.getId();
+    }
 }

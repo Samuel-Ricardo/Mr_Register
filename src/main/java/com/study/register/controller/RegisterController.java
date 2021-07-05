@@ -5,6 +5,8 @@
  */
 package com.study.register.controller;
 
+import com.study.register.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +20,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/people")
 public class RegisterController {
     
+    private PersonRepository personRepository;
+
+    @Autowired
+    public RegisterController(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
+    
     @GetMapping 
-    public String getBook() {
+    public String getStatus() {
         return "API Test";
     }
+    
+    
 }

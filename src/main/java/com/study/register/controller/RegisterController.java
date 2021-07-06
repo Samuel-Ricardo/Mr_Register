@@ -18,6 +18,7 @@ import com.study.register.dto.request.PersonDTO;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -59,4 +60,10 @@ public class RegisterController {
         
         return personService.findById(id);
     }
+    
+    @DeleteMapping("/{id}")
+    public String deleteById(@PathVariable long id){
+        
+        return personService.deleteById(id);
+    } 
 }

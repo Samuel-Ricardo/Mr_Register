@@ -56,8 +56,13 @@ public class PersonService {
         return personMapper.toDTO(person);
     }
 
-    public String deleteById(long id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String deleteById(long id) throws PersonNotFoundException {
+     
+       Person person = verifyIfExist(id);
+    
+       personRepository.deleteById(id);
+       
+       return "| User "+person.getFristName()+" With ID - "+person.getId()+" Has Been Deleted |";
     }
 
     private Person verifyIfExist(long id) throws PersonNotFoundException {

@@ -62,7 +62,7 @@ public class RegisterController {
     }
     
     @DeleteMapping("/{id}")
-    public String deleteById(@PathVariable long id){
+    public String deleteById(@PathVariable long id) throws PersonNotFoundException{
         
         return personService.deleteById(id);
     } 

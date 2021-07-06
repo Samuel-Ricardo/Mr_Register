@@ -21,6 +21,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PersonFactory {
     
-    
+    public static PersonDTO createFakeDTO(){
+        
+        PhoneDTO phone = new PhoneDTO(1, PhoneType.MOBILE, "(01) 91234-5678");
+        PhoneDTO housePhone = new PhoneDTO(1, PhoneType.HOME, "(02) 94321-8765");
+        
+        List<PhoneDTO> phones = new ArrayList<PhoneDTO>();
+        
+        phones.add(phone);
+        phones.add(housePhone);
+        
+        return new PersonDTO(
+                Long.getLong("1"), 
+                "Samuel", 
+                "Ricardo", 
+                "123.456.789-25", 
+                LocalDate.now(), 
+                phones);
+    }
     
 }

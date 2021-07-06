@@ -26,3 +26,53 @@
 <p align="center" id="project">
   A Spring  API made with java, that have as target register persons in a SQL database. It is a complete Rest API, have validation of all params, can insert, select, delete and update users and unit tests cover this application, ensuring a solid and secure application. This API also explore the relationship with SQL and Spring where a user can have multiple phone numbers, custom exception and errors handling, Services to help the Controllers and have a solid and clean code, DTOs to valid params and Mappers to convert DTO to Entity and custom Response Object.
 </p>
+
+ <br>
+ <br>
+  
+ <h2 id="techs">
+  🚀 Main Technologies and Concepts Studieds:
+</h2>
+
+## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></img> Java Development Kit
+
+  <p> Is the Development Kit for Java Developers with all that be need to programming and run any java applications.</p>
+
+  <p> <b>Most Recent</b> </p>
+  
+  > <a href="https://www.oracle.com/java/technologies/javase-downloads.html"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"></img> </a>
+
+  <p> <b>x86 (32bits) Most Recent</b> </p>
+  
+  > <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"></img> </a>
+
+## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></img> Spring
+
+  <p> The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.</p>
+
+  <p> Spring Framework </p>
+  
+  > <a href="https://spring.io/quickstart"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg"></img> </a>
+
+
+  <p> Spring Boot Generate a start spring project with a minimal Spring configuratio </p>
+  
+  > <a href="https://start.spring.io/"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg"></img> </a>
+
+
+## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"></img> Apache Maven
+
+  <p> Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.</p>
+
+  <p> Maven </p>
+  
+  > <a href="https://maven.apache.org/"> <img width="60px" src="https://maven.apache.org/images/maven-logo-black-on-white.png"></img> </a>
+
+#
+
+- [MapStruct](https://mapstruct.org/)
+- [TomCat Server](https://tomcat.apache.org/)
+- [H2 Database](https://github.com/h2database/h2database)
+- [Lombok](https://projectlombok.org/setup/maven)
+
+#

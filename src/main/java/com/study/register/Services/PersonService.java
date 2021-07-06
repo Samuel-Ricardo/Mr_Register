@@ -11,6 +11,8 @@ import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.study.register.repository.PersonRepository;
+import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 /**
@@ -38,8 +40,12 @@ public class PersonService {
         return "Created, ID - "+savedPerson.getId();
     }
 
-    public void listAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<PersonDTO> listAll() {
+        List<Person> allPeople = personRepository.findAll();
+        
+        return allPeople.stream()
+                .map(personMapper::toDTO)
+                .collect(Collectors.toList());
     }
     
     

@@ -49,6 +49,6 @@ public class RegisterController {
     
     @GetMapping
     public List<PersonDTO> getAll() {
-        personService.listAll();
+       return personService.listAll();
     }
 }

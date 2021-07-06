@@ -5,6 +5,7 @@
  */
 package com.study.register.Services;
 
+import com.study.register.dto.mapper.PersonMapper;
 import com.study.register.dto.request.PersonDTO;
 import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import org.springframework.stereotype.Service;
 public class PersonService {
     
     private PersonRepository personRepository;
+    private final PersonMapper personMapper = PersonMapper.ISNTANCE;
     
     @Autowired
     public PersonService(PersonRepository personRepository) {
@@ -29,7 +31,9 @@ public class PersonService {
     
     public String CreatePerson(@RequestBody PersonDTO personDTO) {
         
-        Person savedPerson = personRepository.save(personDTO);
+        Person person = personMapper.toModel(personDTO);
+        
+        Person savedPerson = personRepository.save(person);
         
         return "Created, ID - "+savedPerson.getId();
     }

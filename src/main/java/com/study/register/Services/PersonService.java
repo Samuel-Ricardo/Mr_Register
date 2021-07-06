@@ -9,23 +9,28 @@ import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.study.register.repository.PersonRepository;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Samuel
  */
+
+@Service
 public class PersonService {
     
-    private PersonService personService;
+    private PersonRepository personRepository;
     
     @Autowired
-    public PersonService(PersonService personService) {
-        this.personService = personService;
+    public PersonService(PersonRepository personRepository) {
+        this.personRepository = personRepository;
     }
     
     public String CreatePerson(@RequestBody Person person) {
         
-        return personService.CreatePerson(person);
+        Person savedPerson = personRepository.save(person);
+        
+        return "Created, ID - "+savedPerson.getId();
     }
     
     

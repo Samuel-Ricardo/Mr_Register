@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.study.register.repository.PersonRepository;
+import com.study.register.Services.PersonService;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
  *
@@ -23,23 +25,22 @@ import com.study.register.repository.PersonRepository;
 @RequestMapping("/api/v1/people")
 public class RegisterController {
     
-    private PersonRepository personService;
+    private PersonService personService;
 
     @Autowired
-    public RegisterController(PersonRepository personRepository) {
+    public RegisterController(PersonService personRepository) {
         this.personService = personRepository;
     }
     
-    @GetMapping 
-    public String getStatus() {
-        return "API Test";
-    }
+//    @GetMapping 
+//    public String getStatus() {
+//        return "API Test";
+//    }
     
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public String CreatePerson(@RequestBody Person person) {
         
-        Person savedPerson = personService.save(person);
-        
-        return "Created, ID - "+savedPerson.getId();
+        return personService.CreatePerson(person);
     }
 }

@@ -13,6 +13,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+//import javax.validation.constraints;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -39,5 +40,6 @@ public class Phone {
     private PhoneType type;
     
     @Column(nullable = false)
+//    @NotEmpty
     private String number;
 }

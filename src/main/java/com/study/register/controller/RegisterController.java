@@ -20,6 +20,7 @@ import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
@@ -66,4 +67,9 @@ public class RegisterController {
         
         return personService.deleteById(id);
     } 
+    
+//    @PutMapping("/{id}")
+//    public String updateById(@PathVariable long id, @RequestBody PersonDTO personDTO) {
+//        
+//    }
 }

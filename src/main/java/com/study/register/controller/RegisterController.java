@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.study.register.Services.PersonService;
 import com.study.register.dto.request.PersonDTO;
+import com.study.register.dto.response.Response;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -68,8 +69,9 @@ public class RegisterController {
         return personService.deleteById(id);
     } 
     
-//    @PutMapping("/{id}")
-//    public String updateById(@PathVariable long id, @RequestBody PersonDTO personDTO) {
-//        
-//    }
+    @PutMapping("/{id}")
+    public Response updateById(@PathVariable long id, @RequestBody PersonDTO personDTO) {
+        
+        return personService.updateById(id,personDTO);
+    }
 }

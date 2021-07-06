@@ -17,6 +17,7 @@ import com.study.register.dto.request.PersonDTO;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 /**
@@ -50,5 +51,11 @@ public class RegisterController {
     @GetMapping
     public List<PersonDTO> getAll() {
        return personService.listAll();
+    }
+    
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable long id){
+        
+        return personService.findById(id);
     }
 }

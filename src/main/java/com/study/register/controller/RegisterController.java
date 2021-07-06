@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.study.register.Services.PersonService;
+import com.study.register.dto.request.PersonDTO;
+import javax.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
@@ -39,8 +41,8 @@ public class RegisterController {
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String CreatePerson(@RequestBody Person person) {
+    public String CreatePerson(@RequestBody @Valid PersonDTO personDTO) {
         
-        return personService.CreatePerson(person);
+        return personService.CreatePerson(personDTO);
     }
 }

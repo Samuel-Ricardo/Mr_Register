@@ -5,6 +5,7 @@
  */
 package com.study.register.Services;
 
+import com.study.register.dto.request.PersonDTO;
 import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,9 +27,9 @@ public class PersonService {
         this.personRepository = personRepository;
     }
     
-    public String CreatePerson(@RequestBody Person person) {
+    public String CreatePerson(@RequestBody PersonDTO personDTO) {
         
-        Person savedPerson = personRepository.save(person);
+        Person savedPerson = personRepository.save(personDTO);
         
         return "Created, ID - "+savedPerson.getId();
     }

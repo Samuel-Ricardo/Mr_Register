@@ -41,17 +41,22 @@ class RegisterApplicationTests {
         PersonDTO fakeDTO = createFakeDTO();
         Person expectedEntity = createFakeEntity();
     
-        when(personRepository.save(expectedEntity)).thenReturn(expectedEntity);
+        when(personRepository.save(any(Person.class))).thenReturn(expectedEntity);
    
         
-        Response<PersonDTO> expectedResponse = new Response<PersonDTO> (
-                personMapper.toDTO(expectedEntity), 
-                "Created, ID - " + expectedEntity.getId(), 
-                HttpStatus.CREATED);
+        Response<PersonDTO> expectedResponse = getExpectedResponse(expectedEntity);
         
         
         Response<PersonDTO> createdPersonResponse = personService.CreatePerson(fakeDTO);
         
         Assertions.assertEquals(expectedResponse, createdPersonResponse);
+    }
+
+    private Response<PersonDTO> getExpectedResponse(Person expectedEntity) {
+        Response<PersonDTO> expectedResponse = new Response<PersonDTO> (
+                personMapper.toDTO(expectedEntity),
+                "Created, ID - " + expectedEntity.getId(),
+                HttpStatus.CREATED);
+        return expectedResponse;
     }
 }

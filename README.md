@@ -28,13 +28,19 @@
 </p>
 
  <br>
+ 
+  <p>
+    This API is hosted on <a href='https://mr-register-samuel.herokuapp.com/'> Heroku </a> 
+  </p>
+  
+ <br>
  <br>
   
  <h2 id="techs">
   🚀 Main Technologies and Concepts Studieds:
 </h2>
 
-## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></img> Java Development Kit
+### <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"></img> Java Development Kit
 
   <p> Is the Development Kit for Java Developers with all that be need to programming and run any java applications.</p>
 
@@ -46,7 +52,7 @@
   
   > <a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg"></img> </a>
 
-## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></img> Spring
+### <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"></img> Spring
 
   <p> The Spring Framework provides a comprehensive programming and configuration model for modern Java-based enterprise applications - on any kind of deployment platform.</p>
 
@@ -60,7 +66,7 @@
   > <a href="https://start.spring.io/"> <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg"></img> </a>
 
 
-## <img width="45px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"></img> Apache Maven
+### <img width="60px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg"></img> Apache Maven
 
   <p> Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.</p>
 
@@ -76,3 +82,69 @@
 - [Lombok](https://projectlombok.org/setup/maven)
 
 #
+
+<h2 id="run-project">
+  :zap: Run Project
+</h2>
+
+## :electron: Start Application
+
+### Open Your Git Terminal and Clone This Repositore:
+
+  ``` git
+  
+  $ git clone "https://github.com/Samuel-Ricardo/Mr_Register"
+  
+  ```
+  
+### Make pull:
+
+  ``` git
+  
+  $ git pull "https://github.com/Samuel-Ricardo/Mr_Register"
+  
+  ```
+  
+### Clean and Build Your Application and Run.
+
+- <p> Now Your server is running in <b><a href="http://localhost:8080/">localhost:8080</a></b> </p>
+
+- <p> If you want see details of your application database, access the H2 Database: <b><a href="http://localhost:8080/h2-console">localhost:8080/h2-console</a><b/> </p>
+  
+  <br>
+  <br>
+  
+  <h2 id="author">
+  :octocat: Author
+</h2>
+
+<br>
+
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+
+  <img width="250px" src="https://github.com/Samuel-Ricardo/RocketPay/blob/master/readmefile/github.jpg"/>
+
+  <br>
+
+   <p><b>Samuel Ricardo</b></p>
+   
+</a>
+
+<h1 align="rigth">
+  
+<a href="https://www.linkedin.com/in/samuel-ricardo-cabral/">
+  
+  <img width = "115px" src="https://img.shields.io/badge/Linkedin-1781EB?color=blue&style=for-the-badge&logo=LinkedIn" /> 
+  
+<a>
+
+<a href="https://www.instagram.com/samuel_ricardo.ex/">
+  
+  <img width = "130px" src="https://img.shields.io/badge/Instagram-1781EB?color=purple&style=for-the-badge&logo=Instagram" /> 
+  
+<a>
+  
+<h1>
+
+<br>
+<br>

@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import com.study.register.repository.PersonRepository;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
@@ -46,6 +47,18 @@ public class PersonService {
         return allPeople.stream()
                 .map(personMapper::toDTO)
                 .collect(Collectors.toList());
+    }
+
+    public PersonDTO findById(long id) {
+    
+        Optional<Person> optionalPerson = personRepository.findById(id);
+        
+        if(optionalPerson.isPresent()) {
+            
+            throw new PersonNotFoundException(id);
+        }
+        
+        return personMapper.toDTO(optionalPerson.get());
     }
     
     

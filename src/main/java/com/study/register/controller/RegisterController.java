@@ -45,7 +45,7 @@ public class RegisterController {
     
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public String CreatePerson(@RequestBody @Valid PersonDTO personDTO) {
+    public Response<PersonDTO> CreatePerson(@RequestBody @Valid PersonDTO personDTO) {
         
         return personService.CreatePerson(personDTO);
     }

@@ -34,13 +34,16 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
-    public String CreatePerson(@RequestBody PersonDTO personDTO) {
+    public Response<PersonDTO> CreatePerson(@RequestBody PersonDTO personDTO) {
 
         Person person = personMapper.toModel(personDTO);
 
         Person savedPerson = personRepository.save(person);
 
-        return "Created, ID - " + savedPerson.getId();
+        return new Response<PersonDTO> (
+                personMapper.toDTO(savedPerson), 
+                "Created, ID - " + savedPerson.getId(), 
+                HttpStatus.CREATED);
     }
 
     public List<PersonDTO> listAll() {

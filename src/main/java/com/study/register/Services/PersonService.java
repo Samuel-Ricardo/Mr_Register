@@ -37,6 +37,10 @@ public class PersonService {
         
         return "Created, ID - "+savedPerson.getId();
     }
+
+    public void listAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

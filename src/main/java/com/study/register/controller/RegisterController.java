@@ -5,6 +5,7 @@
  */
 package com.study.register.controller;
 
+import com.study.register.Exception.PersonNotFoundException;
 import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,7 +55,7 @@ public class RegisterController {
     }
     
     @GetMapping("/{id}")
-    public PersonDTO findById(@PathVariable long id){
+    public PersonDTO findById(@PathVariable long id) throws PersonNotFoundException{
         
         return personService.findById(id);
     }

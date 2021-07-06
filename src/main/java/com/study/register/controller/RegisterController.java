@@ -70,7 +70,7 @@ public class RegisterController {
     } 
     
     @PutMapping("/{id}")
-    public Response updateById(@PathVariable long id, @RequestBody PersonDTO personDTO) {
+    public Response<PersonDTO> updateById(@PathVariable long id, @RequestBody PersonDTO personDTO) throws PersonNotFoundException {
         
         return personService.updateById(id,personDTO);
     }

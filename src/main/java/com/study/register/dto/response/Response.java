@@ -5,10 +5,12 @@
  */
 package com.study.register.dto.response;
 
+import java.util.Optional;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.http.HttpStatus;
 
 /**
  *
@@ -21,8 +23,9 @@ import lombok.Setter;
 @Setter
 public class Response<Data> {
     
+//    private Optional<Data> data;
     private Data data;
     private String message;
-    private String status;
+    private HttpStatus status;
     
 }

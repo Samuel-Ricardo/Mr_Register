@@ -8,6 +8,7 @@ package com.study.register.Services;
 import com.study.register.Exception.PersonNotFoundException;
 import com.study.register.dto.mapper.PersonMapper;
 import com.study.register.dto.request.PersonDTO;
+import com.study.register.dto.response.Response;
 import com.study.register.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,6 +16,7 @@ import com.study.register.repository.PersonRepository;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 /**
@@ -69,6 +71,18 @@ public class PersonService {
         Person person = personRepository.findById(id).
                 orElseThrow(() -> new PersonNotFoundException(id));
         return person;
+    }
+
+    public Response<PersonDTO> updateById(long id, PersonDTO personDTO) throws PersonNotFoundException {
+    
+        Person person = verifyIfExist(id);
+        
+        Person updatedPerson = personRepository.save(person);
+        
+        return new Response<PersonDTO>(
+                personMapper.toDTO(updatedPerson), 
+                "User "+person.getFristName()+" has updated with success", 
+                HttpStatus.OK);
     }
 
 }

@@ -9,6 +9,7 @@ import com.study.register.dto.request.PersonDTO;
 import com.study.register.entity.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
+import org.mapstruct.Mapping;
 
 /**
  *
@@ -20,6 +21,7 @@ public interface PersonMapper {
  
     PersonMapper ISNTANCE = Mappers.getMapper(PersonMapper.class);
 
+    @Mapping(target = "birthDate", source = "birthDate", dateFormat = "dd-MM-yyyy")
     Person toModel(PersonDTO personDTO);
     
     PersonDTO toDTO(Person person);

@@ -5,6 +5,7 @@
  */
 package com.study.register.Services;
 
+import com.study.register.Exception.PersonNotFoundException;
 import com.study.register.dto.mapper.PersonMapper;
 import com.study.register.dto.request.PersonDTO;
 import com.study.register.entity.Person;

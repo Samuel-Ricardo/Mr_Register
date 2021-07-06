@@ -5,8 +5,10 @@
  */
 package com.study.register.factory;
 
+import com.study.register.dto.mapper.PersonMapper;
 import com.study.register.dto.request.PersonDTO;
 import com.study.register.dto.request.PhoneDTO;
+import com.study.register.entity.Person;
 import com.study.register.entity.Phone;
 import com.study.register.enums.PhoneType;
 import java.time.LocalDate;
@@ -39,5 +41,14 @@ public class PersonFactory {
                 LocalDate.now(), 
                 phones);
     }
-    
+
+    public static Person createFakeEntity(){
+        
+        PersonDTO fakeDTO = createFakeDTO();
+        
+        PersonMapper mapper = PersonMapper.ISNTANCE;
+        
+        return mapper.toModel(fakeDTO);
+    }
+
 }

@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://elixir-lang.org/" ><img width="250px" src="https://camo.githubusercontent.com/a8e2a5e36df66e1a1c36912287b4dbc5e72fa5d154ab191b7fc5c6e1f32fc8fd/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f737072696e672f737072696e672d6f726967696e616c2d776f72646d61726b2e737667"/><a></p>
 <h4 align="center">GFT Java #2 🚀</h4>
-<h4 align="center">Application made during a Java Bootcamp promoted by <a href="https://www.gft.com/"> @GFT </a> in Partnership With <a href="https://web.digitalinnovation.one/"> @Digital Inovation One</a> </h4>
+<h4 align="center">Application made during a Java Bootcamp promoted by <a href="https://www.gft.com/"> @GFT </a> in Partnership With <a href="https://web.digitalinnovation.one/"> @Digital Inovation One</a> with instructor <a href="https://github.com/rpeleias">@Rodrigo peleia</a> </h4>
 
 <p align="center">
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

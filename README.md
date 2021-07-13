@@ -80,6 +80,7 @@
 - [TomCat Server](https://tomcat.apache.org/)
 - [H2 Database](https://github.com/h2database/h2database)
 - [Lombok](https://projectlombok.org/setup/maven)
+- [JUnit](https://junit.org/junit5/)
 
 #
 
